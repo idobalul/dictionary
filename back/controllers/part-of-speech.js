@@ -17,7 +17,7 @@ exports.getRandomWordByPOS = async (req, res) => {
     let { letter } = req.query;
     let params;
 
-    if (!part || !POS[part]) {
+    if (!part) {
       res.status(400).send('Invalid or missing parameter "part"');
       return;
     }
