@@ -32,3 +32,5 @@ You can also random a word by part of speech by using the bottom inputs at the h
 <br>  
 Or if you want a random word that starts in se specific letter it will look like this:  
 ![image of random word by POS with letter](/assets/random-with-letter.png "localhost:8080/part-of-speech/verb?letter=f")
+
+Link to the site: http://dictionary-app-idobalul.s3-website.eu-central-1.amazonaws.com

@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { Notyf } from "notyf";
 
+const BASE_URL = "https://acukr0ygs7.execute-api.eu-central-1.amazonaws.com";
+
 const notyf = new Notyf({
   duration: 5000,
   position: {
@@ -31,9 +33,9 @@ export default function POS() {
       let response;
       if (state) {
         const { letter } = state;
-        response = await axios.get(`/part-of-speech/${pos}?letter=${letter}`);
+        response = await axios.get(`${BASE_URL}/part-of-speech/${pos}?letter=${letter}`);
       } else {
-        response = await axios.get(`/part-of-speech/${pos}`);
+        response = await axios.get(`${BASE_URL}/part-of-speech/${pos}`);
       }
       setData(response.data);
     } catch (error) {

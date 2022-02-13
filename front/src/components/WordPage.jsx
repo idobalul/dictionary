@@ -6,6 +6,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { Notyf } from "notyf";
 
+const BASE_URL = "https://acukr0ygs7.execute-api.eu-central-1.amazonaws.com";
+
 const notyf = new Notyf({
   duration: 5000,
   position: {
@@ -30,9 +32,9 @@ export default function WordPage() {
     try {
       let response;
       if (pos) {
-        response = await axios.get(`/${word}/${pos}`);
+        response = await axios.get(`${BASE_URL}/${word}/${pos}`);
       } else {
-        response = await axios.get(`/${word}`);
+        response = await axios.get(`${BASE_URL}/${word}`);
       }
       setData(response.data);
     } catch (error) {

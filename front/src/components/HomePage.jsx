@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { InputGroup, FormControl, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { Notyf } from "notyf";
+import "../App.css";
 
 const notyf = new Notyf({
   duration: 5000,
@@ -55,7 +56,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="home=page">
+    <div className="home-page">
       <h1 className="mb-5">Dictionary</h1>
       <InputGroup className="mb-3">
         <InputGroup.Text id="basic-addon1">Search by word</InputGroup.Text>
